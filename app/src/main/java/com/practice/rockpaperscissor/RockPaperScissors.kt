@@ -1,10 +1,10 @@
 package com.practice.rockpaperscissor
 
 fun main() {
-    var isPlayerTryingAgain: Boolean
-    do {
+    var isPlayerTryingAgain: Boolean = true
+    while ( isPlayerTryingAgain ) {
     println("rock, paper, scissor ??? Enter your choice \uD83D\uDE0A \n")
-    var playerChoice = readln()
+    val playerChoice = readln()
     val randomNumber = (1..3).random()
     var computerChoice = ""
     computerChoice = when (randomNumber) {
@@ -48,5 +48,5 @@ fun main() {
                 isPlayerTryingAgain = true
             }
         }
-    } while ( isPlayerTryingAgain )
+    }
 }
