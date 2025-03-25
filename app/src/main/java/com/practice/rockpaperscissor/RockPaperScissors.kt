@@ -1,18 +1,23 @@
 package com.practice.rockpaperscissor
+var isPlayerTryingAgain: Boolean = true
 
 fun main() {
-    var isPlayerTryingAgain: Boolean = true
     while ( isPlayerTryingAgain ) {
-    println("rock, paper, scissor ??? Enter your choice \uD83D\uDE0A \n")
-    val playerChoice = readln()
-    val randomNumber = (1..3).random()
-    var computerChoice = ""
-    computerChoice = when (randomNumber) {
-        1 -> "rock"
-        2 -> "paper"
-        else -> "scissor"
+        handleRockPaperScissor()
     }
-    print("computer chooses: $computerChoice \n\n")
+}
+
+fun handleRockPaperScissor( ) {
+        println("rock, paper, scissor ??? Enter your choice \uD83D\uDE0A \n")
+        val playerChoice = readln()
+        val randomNumber = (1..3).random()
+        var computerChoice = ""
+        computerChoice = when (randomNumber) {
+            1 -> "rock"
+            2 -> "paper"
+            else -> "scissor"
+        }
+        print("computer chooses: $computerChoice \n\n")
 
         when {
             (playerChoice == computerChoice) -> {
@@ -20,7 +25,7 @@ fun main() {
                 isPlayerTryingAgain = true
             }
             (playerChoice == "rock" && computerChoice == "paper") -> {
-                print("You lost \uD83D\uDE14");
+                print("You lost \uD83D\uDE14 \n\n");
                 isPlayerTryingAgain = true
             }
             (playerChoice == "paper" && computerChoice == "rock") -> {
@@ -28,7 +33,7 @@ fun main() {
                 isPlayerTryingAgain = false
             }
             (playerChoice == "paper" && computerChoice == "scissor") -> {
-                print("You lost \uD83D\uDE14")
+                print("You lost \uD83D\uDE14 \n\n")
                 isPlayerTryingAgain = true
             }
             (playerChoice == "rock" && computerChoice == "scissor") -> {
@@ -36,7 +41,7 @@ fun main() {
                 isPlayerTryingAgain = false
             }
             (playerChoice == "scissor" && computerChoice == "rock") -> {
-                print("You lost \uD83D\uDE14")
+                print("You lost \uD83D\uDE14 \n\n")
                 isPlayerTryingAgain = true
             }
             (playerChoice == "scissor" && computerChoice == "paper") -> {
@@ -48,5 +53,4 @@ fun main() {
                 isPlayerTryingAgain = true
             }
         }
-    }
 }
