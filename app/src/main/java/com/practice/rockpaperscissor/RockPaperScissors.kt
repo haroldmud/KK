@@ -6,8 +6,8 @@ fun main() {
 
 fun makeCoffee(spoons: Int) {
     var countSpoons = 0
-    while(countSpoons  in 0 .. spoons - 1 ) {
+    while(countSpoons  in 0..< spoons) { //this is the same as in 0 .. spoons - 1
         countSpoons ++
-        print("$countSpoons:we've added $spoons spoons of sugar \n")
+        print("$countSpoons:we've added $countSpoons ${if (countSpoons == 1 ) "spoon" else "spoons"} of sugar \n")
     }
 }
