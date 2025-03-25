@@ -35,7 +35,7 @@ fun makeCoffee(spoons: Int, name: String) {
             println("$name, We added $spoons of sugar in your coffee, but it's not good for your health")
             isDone = true
         } else if(!isExceed && isConfirmed !== "yes") {
-            println("$name, something went wrong")
+            println("$name, I think something went wrong")
             isDone = true
         }
     }
