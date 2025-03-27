@@ -2,7 +2,7 @@ package com.practice.rockpaperscissor
 
 
 fun main() {
-   for(i in 1 .. 10) {
+   for(i in 10 downTo  1) {
        println("$i: loop me")
    }
 }
