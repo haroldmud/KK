@@ -1,7 +1,7 @@
 package com.practice.rockpaperscissor
 
 fun main() {
-    digitize(21451)
+    digitize(510000)
     getAscii('C')
     checkFactor(5, 10)
 }
