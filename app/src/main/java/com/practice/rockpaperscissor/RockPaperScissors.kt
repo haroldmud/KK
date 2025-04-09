@@ -21,3 +21,9 @@ fun getAscii(c: Char): Int {
 fun checkFactor(base: Int, factor: Int ): Boolean {
     return if(base % factor == 0) true else false
 }
+
+//MAP AN ARRAY TO DOUBLE ITS ITEMS
+fun maps(x: IntArray): IntArray {
+    val doubled = x.map {it * 2}
+    return doubled.toIntArray()
+}
