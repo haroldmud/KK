@@ -31,10 +31,11 @@ fun maps(x: IntArray): IntArray {
 
 //SUM OF MIXED ARRAYS
 fun mixedSum(mixed: List<any>): Int {
-    val arrayInt = mixed.map {it.toString().toInt()}
-    var sum = 0
-    for(n in arrayInt) {
-        sum += n
+    return mixed.sumOf() {
+        when(it) {
+            is Int -> it
+            is String -> it.toIntOrNull() ?: 0
+            else -> 0
+        }
     }
-    return sum
 }
