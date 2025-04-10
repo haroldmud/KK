@@ -4,6 +4,7 @@ fun main() {
     digitize(510000)
     getAscii('C')
     checkFactor(5, 10)
+    mixedSum(listOf(23,50, "89"))
 }
 
 // CONVERT NUMBERS TO REVERSED ARRAY OF DIGITS
@@ -26,4 +27,14 @@ fun checkFactor(base: Int, factor: Int ): Boolean {
 fun maps(x: IntArray): IntArray {
     val doubled = x.map {it * 2}
     return doubled.toIntArray()
+}
+
+//SUM OF MIXED ARRAYS
+fun mixedSum(mixed: List<any>): Int {
+    val arrayInt = mixed.map {it.toString().toInt()}
+    var sum = 0
+    for(n in arrayInt) {
+        sum += n
+    }
+    return sum
 }
