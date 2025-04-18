@@ -4,7 +4,8 @@ fun main() {
     digitize(510000)
     getAscii('C')
     checkFactor(5, 10)
-    mixedSum(listOf(23,50, "89"))
+//    mixedSum(listOf(23,50, "89"))
+    replace("Hello WORLD")
 }
 
 // CONVERT NUMBERS TO REVERSED ARRAY OF DIGITS
@@ -30,12 +31,27 @@ fun maps(x: IntArray): IntArray {
 }
 
 //SUM OF MIXED ARRAYS
-fun mixedSum(mixed: List<any>): Int {
-    return mixed.sumOf() {
-        when(it) {
-            is Int -> it
-            is String -> it.toIntOrNull() ?: 0
-            else -> 0
+//fun mixedSum(mixed: List<any>): Int {
+//    return mixed.sumOf() {
+//        when(it) {
+//            is Int -> it
+//            is String -> it.toIntOrNull() ?: 0
+//            else -> 0
+//        }
+//    }
+//}
+
+// Replace all vowel to exclamation mark in the sentence
+fun replace(s: String): String {
+    var newS = ""
+    var vow = "aeiou"
+    for (i in s) {
+        if(i.lowercaseChar() in vow) {
+            newS +="!"
+        } else {
+            newS += i
         }
     }
+    print("$s __ $newS")
+    return newS
 }
