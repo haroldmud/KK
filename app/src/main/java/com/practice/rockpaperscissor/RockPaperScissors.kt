@@ -31,15 +31,15 @@ fun maps(x: IntArray): IntArray {
 }
 
 //SUM OF MIXED ARRAYS
-//fun mixedSum(mixed: List<any>): Int {
-//    return mixed.sumOf() {
-//        when(it) {
-//            is Int -> it
-//            is String -> it.toIntOrNull() ?: 0
-//            else -> 0
-//        }
-//    }
-//}
+fun mixedSum(mixed: List<any>): Int {
+    return mixed.sumOf() {
+        when(it) {
+            is Int -> it
+            is String -> it.toIntOrNull() ?: 0
+            else -> 0
+        }
+    }
+}
 
 // Replace all vowel to exclamation mark in the sentence
 fun replace(s: String): String {
