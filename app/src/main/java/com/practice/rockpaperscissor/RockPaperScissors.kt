@@ -4,7 +4,7 @@ fun main() {
     digitize(510000)
     getAscii('C')
     checkFactor(5, 10)
-//    mixedSum(listOf(23,50, "89"))
+    mixedSum(listOf(23,50, "89"))
     replace("Hello WORLD")
 }
 
@@ -31,7 +31,7 @@ fun maps(x: IntArray): IntArray {
 }
 
 //SUM OF MIXED ARRAYS
-fun mixedSum(mixed: List<any>): Int {
+fun mixedSum(mixed: List<Any>): Int {
     return mixed.sumOf() {
         when(it) {
             is Int -> it
@@ -44,7 +44,7 @@ fun mixedSum(mixed: List<any>): Int {
 // Replace all vowel to exclamation mark in the sentence
 fun replace(s: String): String {
     var newS = ""
-    var vow = "aeiou"
+    val vow = "aeiou"
     for (i in s) {
         if(i.lowercaseChar() in vow) {
             newS +="!"
