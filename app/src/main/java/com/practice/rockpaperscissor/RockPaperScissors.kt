@@ -41,7 +41,7 @@ fun mixedSum(mixed: List<Any>): Int {
     }
 }
 
-// Replace all vowel to exclamation mark in the sentence
+// Replace all vowel to exclamation mark in the SENTENCE
 fun replace(s: String): String {
     var newS = ""
     val vow = "aeiou"
