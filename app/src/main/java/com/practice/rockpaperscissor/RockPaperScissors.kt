@@ -55,3 +55,15 @@ fun replace(s: String): String {
     print("$s __ $newS")
     return newS
 }
+
+// ROCK PAPER SCISSORS
+fun rps(p1: String, p2: String): String{
+    return when {
+        p1 == p2 -> "Draw!"
+        (p1 == "scissors" && p2 == "paper")
+                || (p2 == "scissors" && p1 == "rock")
+                || (p2 == "rock" && p1 == "paper")
+                    -> "Player 1 won!"
+        else -> "Player 2 won!"
+    }
+}
