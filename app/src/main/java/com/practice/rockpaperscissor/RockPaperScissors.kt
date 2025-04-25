@@ -6,6 +6,8 @@ fun main() {
     checkFactor(5, 10)
     mixedSum(listOf(23,50, "89"))
     replace("Hello WORLD")
+    rps("rock", "paper")
+    doubleChar("myWorld")
 }
 
 // CONVERT NUMBERS TO REVERSED ARRAY OF DIGITS
@@ -66,4 +68,10 @@ fun rps(p1: String, p2: String): String{
                     -> "Player 1 won!"
         else -> "Player 2 won!"
     }
+}
+
+//DOUBLING CHARACTERS
+fun doubleChar(s: String): String {
+    val myArrayedString = s.toList().map {"$it" + "$it"}
+    return myArrayedString.joinToString("")
 }
