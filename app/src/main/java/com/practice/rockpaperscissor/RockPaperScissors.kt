@@ -9,6 +9,7 @@ fun main() {
     rps("rock", "paper")
     doubleChar("myWorld")
     sumPositives(arrayOf(20, -4, 10).toIntArray())
+    reverseSeq(5)
 }
 
 // CONVERT NUMBERS TO REVERSED ARRAY OF DIGITS
@@ -81,4 +82,14 @@ fun doubleChar(s: String): String {
 fun sumPositives(numbers: IntArray): Int {
     val ourArray = numbers.filter {it > 0}
     return ourArray.sum()
+}
+
+//RETURNING REVERSED ARRAY FROM A REFERENCE
+fun reverseSeq(n: Int): List<Int> {
+    val ourList = mutableListOf<Int>()
+    for(n in 1..n) {
+        ourList.add(n)
+    }
+    print(ourList.reverse()) // this will update the mutable array regardless unless you use `reversed()` instead
+    return ourList
 }
