@@ -8,6 +8,7 @@ fun main() {
     replace("Hello WORLD")
     rps("rock", "paper")
     doubleChar("myWorld")
+    sumPositives(arrayOf(20, -4, 10).toIntArray())
 }
 
 // CONVERT NUMBERS TO REVERSED ARRAY OF DIGITS
@@ -74,4 +75,10 @@ fun rps(p1: String, p2: String): String{
 fun doubleChar(s: String): String {
     val myArrayedString = s.toList().map {"$it" + "$it"}
     return myArrayedString.joinToString("")
+}
+
+//SUMMING POSITIVE NUMBERS ONLY
+fun sumPositives(numbers: IntArray): Int {
+    val ourArray = numbers.filter {it > 0}
+    return ourArray.sum()
 }
