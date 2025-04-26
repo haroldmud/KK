@@ -7,7 +7,7 @@ fun main() {
     mixedSum(listOf(23,50, "89"))
     replace("Hello WORLD")
     rps("rock", "paper")
-    doubleChar("myWorld")
+    doubleChar("Big Man Ting yeah")
     sumPositives(arrayOf(20, -4, 10).toIntArray())
     reverseSeq(5)
 }
