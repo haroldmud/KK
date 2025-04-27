@@ -10,6 +10,7 @@ fun main() {
     doubleChar("Big Man Ting yeah")
     sumPositives(arrayOf(20, -4, 10).toIntArray())
     reverseSeq(5)
+    points(listOf("1:1", "2:4", "1:0", "4:3", "5:5", "2:1", "0:0"))
 }
 
 // CONVERT NUMBERS TO REVERSED ARRAY OF DIGITS
@@ -92,4 +93,21 @@ fun reverseSeq(n: Int): List<Int> {
     }
     print(ourList.reverse()) // this will update the mutable array regardless unless you use `reversed()` instead
     return ourList
+}
+
+// TEAM POINTS CALCULATION
+fun points(games: List<String>): Int {
+    var score = 0
+    var newArr = games.map {it.split(":").map {it.toInt()}}
+    print(newArr)
+    for(n in newArr) {
+        val x = n[0]
+        val y = n[1]
+        when {
+            (x > y) -> score += 3
+            (x < y) -> score += 0
+            else -> score += 1
+        }
+    }
+    return score
 }
