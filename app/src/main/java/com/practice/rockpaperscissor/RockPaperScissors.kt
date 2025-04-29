@@ -11,6 +11,7 @@ fun main() {
     sumPositives(arrayOf(20, -4, 10).toIntArray())
     reverseSeq(5)
     points(listOf("1:1", "2:4", "1:0", "4:3", "5:5", "2:1", "0:0"))
+    maxDiffHandler(arrayOf("lana", "del", "rey"), arrayOf("able", "tesfaye") )
 }
 
 // CONVERT NUMBERS TO REVERSED ARRAY OF DIGITS
@@ -113,7 +114,7 @@ fun points(games: List<String>): Int {
 }
 
 //MAXIMUM LENGTH DIFFERENCE
-fun mxdiflg(a1:Array<String>, a2:Array<String>):Int {
+fun maxDiffHandler(a1:Array<String>, a2:Array<String>):Int {
     if(a1.isEmpty() || a2.isEmpty()) return -1
     val highX = a1.maxByOrNull {it.length}.toString().length
     val lowX = a1.minByOrNull {it.length}.toString().length
