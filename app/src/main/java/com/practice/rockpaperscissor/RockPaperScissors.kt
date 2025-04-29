@@ -111,3 +111,16 @@ fun points(games: List<String>): Int {
     }
     return score
 }
+
+//MAXIMUM LENGTH DIFFERENCE
+fun mxdiflg(a1:Array<String>, a2:Array<String>):Int {
+    if(a1.isEmpty() || a2.isEmpty()) return -1
+    val highX = a1.maxByOrNull {it.length}.toString().length
+    val lowX = a1.minByOrNull {it.length}.toString().length
+    val highY = a2.maxByOrNull {it.length}.toString().length
+    val lowY = a2.minByOrNull {it.length}.toString().length
+    val result1 = highX - lowY
+    val result2 = highY - lowX
+    val result =  listOf(result1, result2).maxByOrNull { it }
+    return if(result is Int ) result else -1
+}
