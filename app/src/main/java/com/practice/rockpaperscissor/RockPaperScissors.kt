@@ -131,3 +131,15 @@ fun maxDiffHandler(a1:Array<String>, a2:Array<String>):Int {
 fun smallEnough(a : IntArray, limit : Int) : Boolean {
     return a.maxBy { it } <= limit
 }
+
+fun nameValue(arr: Array<String>): IntArray {
+        val asciiInit = 96
+
+        var result = arr.map {
+            it.toCharArray().map {it.code - asciiInit}
+        }.map {it.filter {it > 0}.sum()}
+
+        return result.mapIndexed {index, value -> value * (index + 1)}.toIntArray()
+    }
+}
+
