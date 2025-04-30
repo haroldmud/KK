@@ -12,6 +12,7 @@ fun main() {
     reverseSeq(5)
     points(listOf("1:1", "2:4", "1:0", "4:3", "5:5", "2:1", "0:0"))
     maxDiffHandler(arrayOf("lana", "del", "rey"), arrayOf("able", "tesfaye") )
+    smallEnough(intArrayOf(12,34,54), 56)
 }
 
 // CONVERT NUMBERS TO REVERSED ARRAY OF DIGITS
@@ -124,4 +125,9 @@ fun maxDiffHandler(a1:Array<String>, a2:Array<String>):Int {
     val result2 = highY - lowX
     val result =  listOf(result1, result2).maxByOrNull { it }
     return if(result is Int ) result else -1
+}
+
+//SMALL ENOUGH ? -- BEGINNER
+fun smallEnough(a : IntArray, limit : Int) : Boolean {
+    return a.maxBy { it } <= limit
 }
