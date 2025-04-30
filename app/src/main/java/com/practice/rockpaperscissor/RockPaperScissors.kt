@@ -138,7 +138,7 @@ fun nameValue(arr: Array<String>): IntArray {
         val asciiInit = 96
 
         val result = arr.map {
-            it.toCharArray().map {it.code - asciiInit}
+            it.lowercase().toCharArray().map {it.code - asciiInit}
         }.map {it.filter {it > 0}.sum()}
 
         return result.mapIndexed {index, value -> value * (index + 1)}.toIntArray()
