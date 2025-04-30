@@ -135,7 +135,7 @@ fun smallEnough(a : IntArray, limit : Int) : Boolean {
 fun nameValue(arr: Array<String>): IntArray {
         val asciiInit = 96
 
-        var result = arr.map {
+        val result = arr.map {
             it.toCharArray().map {it.code - asciiInit}
         }.map {it.filter {it > 0}.sum()}
 
