@@ -13,6 +13,7 @@ fun main() {
     points(listOf("1:1", "2:4", "1:0", "4:3", "5:5", "2:1", "0:0"))
     maxDiffHandler(arrayOf("lana", "del", "rey"), arrayOf("able", "tesfaye") )
     smallEnough(intArrayOf(12,34,54), 56)
+    nameValue(arrayOf("digitize", "get ascii", "checkFactor"))
 }
 
 // CONVERT NUMBERS TO REVERSED ARRAY OF DIGITS
