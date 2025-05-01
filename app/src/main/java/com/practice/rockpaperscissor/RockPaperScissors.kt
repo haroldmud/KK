@@ -142,6 +142,11 @@ fun nameValue(arr: Array<String>): IntArray {
         }.map {it.filter {it > 0}.sum()}
 
         return result.mapIndexed {index, value -> value * (index + 1)}.toIntArray()
-    }
 }
+
+// CAR -  MOUSE EASY VERSION
+fun catMouse(s: String): String {
+    return if(s.split("....").size == 2)  "Escaped!" else "Caught!"
+}
+
 
