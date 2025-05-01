@@ -133,7 +133,7 @@ fun smallEnough(a : IntArray, limit : Int) : Boolean {
     return a.maxBy { it } <= limit
 }
 
-// WORD VALUES
+// WORD INTO VALUES
 fun nameValue(arr: Array<String>): IntArray {
         val asciiInit = 96
 
