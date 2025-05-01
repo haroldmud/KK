@@ -14,6 +14,7 @@ fun main() {
     maxDiffHandler(arrayOf("lana", "del", "rey"), arrayOf("able", "tesfaye") )
     smallEnough(intArrayOf(12,34,54), 56)
     nameValue(arrayOf("digitize", "get ascii", "checkFactor"))
+    catMouse("C..................m")
 }
 
 // CONVERT NUMBERS TO REVERSED ARRAY OF DIGITS
@@ -148,5 +149,3 @@ fun nameValue(arr: Array<String>): IntArray {
 fun catMouse(s: String): String {
     return if(s.split("....").size == 2)  "Escaped!" else "Caught!"
 }
-
-
