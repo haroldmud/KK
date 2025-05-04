@@ -118,7 +118,7 @@ fun points(games: List<String>): Int {
 
 //MAXIMUM LENGTH DIFFERENCE
 fun maxDiffHandler(a1:Array<String>, a2:Array<String>):Int {
-    if(a1.isEmpty() || a2.isEmpty()) return -1
+    if(a1.isEmpty() || a2.isEmpty()) return -1s
     val highX = a1.maxByOrNull {it.length}.toString().length
     val lowX = a1.minByOrNull {it.length}.toString().length
     val highY = a2.maxByOrNull {it.length}.toString().length
@@ -129,7 +129,7 @@ fun maxDiffHandler(a1:Array<String>, a2:Array<String>):Int {
     return if(result is Int ) result else -1
 }
 
-//SMALL ENOUGH ? -- BEGINNER
+//SMALL ENOUGH ? -- BEGINNER LEVEL
 fun smallEnough(a : IntArray, limit : Int) : Boolean {
     return a.maxBy { it } <= limit
 }
