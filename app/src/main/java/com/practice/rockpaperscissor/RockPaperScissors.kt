@@ -149,3 +149,13 @@ fun nameValue(arr: Array<String>): IntArray {
 fun catMouse(s: String): String {
     return if(s.split("....").size == 2)  "Escaped!" else "Caught!"
 }
+
+fun accum(str:String):String {
+    var arrayed = str.mapIndexed {i, s -> s
+        .toChar()
+        .uppercase() +
+            s.toString()
+                .lowercase()
+                .repeat(i)};
+    return (arrayed.joinToString("-"))
+}
