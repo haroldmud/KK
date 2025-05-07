@@ -15,6 +15,7 @@ fun main() {
     smallEnough(intArrayOf(12,34,54), 56)
     nameValue(arrayOf("digitize", "get ascii", "checkFactor"))
     catMouse("C..................m")
+    accum("pekapeka")
 }
 
 // CONVERT NUMBERS TO REVERSED ARRAY OF DIGITS
