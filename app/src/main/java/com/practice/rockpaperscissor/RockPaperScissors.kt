@@ -152,7 +152,7 @@ fun catMouse(s: String): String {
 }
 
 fun accum(str:String):String {
-    var arrayed = str.mapIndexed {i, s -> s
+    val arrayed = str.mapIndexed {i, s -> s
         .toChar()
         .uppercase() +
             s.toString()
