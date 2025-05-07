@@ -15,7 +15,7 @@ fun main() {
     smallEnough(intArrayOf(12,34,54), 56)
     nameValue(arrayOf("digitize", "get ascii", "checkFactor"))
     catMouse("C..................m")
-    accum("pekapeka")
+    mumbling("pekapeka")
 }
 
 // CONVERT NUMBERS TO REVERSED ARRAY OF DIGITS
@@ -151,7 +151,7 @@ fun catMouse(s: String): String {
     return if(s.split("....").size == 2)  "Escaped!" else "Caught!"
 }
 
-fun accum(str:String):String {
+fun mumbling(str:String):String {
     val arrayed = str.mapIndexed {i, s -> s
         .toChar()
         .uppercase() +
