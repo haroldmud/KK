@@ -151,7 +151,7 @@ fun catMouse(s: String): String {
     return if(s.split("....").size == 2)  "Escaped!" else "Caught!"
 }
 
-//Mumbling
+//MUMBLING CHALLENGE
 fun mumbling(str:String):String {
     val arrayed = str.mapIndexed {i, s -> s
         .toChar()
