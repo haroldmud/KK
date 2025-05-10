@@ -103,7 +103,7 @@ fun reverseSeq(n: Int): List<Int> {
 // FOOTBALL TEAM POINTS CALCULATION
 fun points(games: List<String>): Int {
     var score = 0
-    var newArr = games.map {it.split(":").map {it.toInt()}}
+    val newArr = games.map {it.split(":").map {it.toInt()}}
     print(newArr)
     for(n in newArr) {
         val x = n[0]
