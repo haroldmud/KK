@@ -154,9 +154,9 @@ fun catMouse(s: String): String {
 //MUMBLING CHALLENGE
 fun mumbling(str:String):String {
     val arrayed = str.mapIndexed {i, s -> s
-        .toChar()
+        .toChar() // because a single character should not be a string
         .uppercase() +
-            s.toString()
+            s.toString() // because a set of concatenated characters should only be a string
                 .lowercase()
                 .repeat(i)};
     return (arrayed.joinToString("-"))
