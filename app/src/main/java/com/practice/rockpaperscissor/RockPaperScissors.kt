@@ -17,6 +17,7 @@ fun main() {
     catMouse("C..................m")
     mumbling("pekapeka")
     countRedBeads(67)
+    moveTen("butuyalelonganalalite")
 }
 
 // CONVERT NUMBERS TO REVERSED ARRAY OF DIGITS
