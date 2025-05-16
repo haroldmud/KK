@@ -196,4 +196,13 @@ fun maxHandler(arr: IntArray): Int {
 }
 
 //MINIMUM NUMBER - Without short cut functions
-fun min
+fun minHandler(arr: IntArray): Int {
+    var init = 0
+    for(n in arr) {
+        if(n < init) {
+            init = n
+        }
+    }
+    print(init)
+    return init
+}
