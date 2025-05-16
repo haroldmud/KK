@@ -19,8 +19,14 @@ fun main() {
     mumbling("peekaboo")
     countRedBeads(67)
     moveTen("butuyalelonganalalite")
-    maxHandler(intArrayOf(12,23,534,765,45,3,2,3,5,5,3,4,4,6,23,423,53,64563))
-    minHandler(arrayOf(-23, 32, 0,323, 0.242))
+    searchMaxOrMin(
+        ::maxHandler,
+        ::minHandler,
+        searchMax = true,
+        searchMin = false,
+        intArrayOf(12,23,534,765,45,3,2,3,5,5,3,4,4,6,23,423,53,64563),
+        arrayOf(-23, 32, 0,323, 0.242)
+    )
 }
 
 // CONVERT NUMBERS TO REVERSED ARRAY OF DIGITS
@@ -206,4 +212,16 @@ fun minHandler(arr: Array<Number>): Double {
     }
     print(init)
     return init
+}
+
+fun searchMaxOrMin(
+    findMax: (IntArray ) -> Int,
+    findMin: (Array<Number>) -> Double,
+    searchMax: Boolean,
+    searchMin: Boolean,
+    listMax: IntArray,
+    listMin: Array<Number>
+    ) {
+  if(searchMax) findMax(listMax)
+  if(searchMin) findMin(listMin)
 }
