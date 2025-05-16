@@ -184,7 +184,7 @@ fun moveTen(s: String): String {
 }
 
 //MAXIMUM NUMBER - Without using the max function
-fun maxAndMin(arr: IntArray): Int {
+fun maxHandler(arr: IntArray): Int {
     var init = 0
     for(n in arr) {
         if(n > init) {
