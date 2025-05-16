@@ -16,6 +16,7 @@ fun main() {
     nameValue(arrayOf("digitize", "get ascii", "checkFactor"))
     catMouse("C..................m")
     mumbling("pekapeka")
+    countRedBeads(67)
 }
 
 // CONVERT NUMBERS TO REVERSED ARRAY OF DIGITS
