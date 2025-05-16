@@ -1,23 +1,24 @@
 package com.practice.rockpaperscissor
 
 fun main() {
-//    digitize(510000)
-//    getAscii('C')
-//    checkFactor(5, 10)
-//    mixedSum(listOf(23,50, "89"))
-//    replace("Hello WORLD")
-//    rps("rock", "paper")
-//    doubleChar("Big Man Ting yeah")
-//    sumPositives(arrayOf(20, -4, 10).toIntArray())
-//    reverseSeq(5)
-//    points(listOf("1:1", "2:4", "1:0", "4:3", "5:5", "2:1", "0:0"))
-//    maxDiffHandler(arrayOf("lana", "del", "rey"), arrayOf("able", "tesfaye") )
-//    smallEnough(intArrayOf(12,34,54), 56)
-//    nameValue(arrayOf("digitize", "get ascii", "checkFactor"))
-//    catMouse("C..................m")
-//    mumbling("pekapeka")
-//    countRedBeads(67)
-//    moveTen("butuyalelonganalalite")
+    digitize(510000)
+    maps(intArrayOf(3,23,4,5,34))
+    getAscii('C')
+    checkFactor(5, 10)
+    mixedSum(listOf(23,50, "89"))
+    replace("Hello WORLD")
+    rps("rock", "paper")
+    doubleChar("Big Man Ting yeah")
+    sumPositives(arrayOf(20, -4, 10).toIntArray())
+    reverseSeq(5)
+    points(listOf("1:1", "2:4", "1:0", "4:3", "5:5", "2:1", "0:0"))
+    maxDiffHandler(arrayOf("lana", "del", "rey"), arrayOf("able", "tesfaye") )
+    smallEnough(intArrayOf(12,34,54), 56)
+    nameValue(arrayOf("digitize", "get ascii", "checkFactor"))
+    catMouse("C..................m")
+    mumbling("pekapeka")
+    countRedBeads(67)
+    moveTen("butuyalelonganalalite")
     maxHandler(intArrayOf(12,23,534,765,45,3,2,3,5,5,3,4,4,6,23,423,53,64563))
     minHandler(arrayOf(-23, 32, 0,323, 0.242))
 }
@@ -35,7 +36,7 @@ fun getAscii(c: Char): Int {
 
 //CHECK FOR FACTOR
 fun checkFactor(base: Int, factor: Int ): Boolean {
-    return if(base % factor == 0) true else false
+    return base % factor == 0
 }
 
 //MAP AN ARRAY TO DOUBLE ITS ITEMS
@@ -46,7 +47,7 @@ fun maps(x: IntArray): IntArray {
 
 //SUM OF MIXED ARRAYS
 fun mixedSum(mixed: List<Any>): Int {
-    return mixed.sumOf() {
+    return mixed.sumOf {
         when(it) {
             is Int -> it
             is String -> it.toIntOrNull() ?: 0
@@ -97,8 +98,8 @@ fun sumPositives(numbers: IntArray): Int {
 //RETURNING REVERSED ARRAY FROM A REFERENCE
 fun reverseSeq(n: Int): List<Int> {
     val ourList = mutableListOf<Int>()
-    for(n in 1..n) {
-        ourList.add(n)
+    for(x in 1..n) {
+        ourList.add(x)
     }
     print(ourList.reverse()) // this will update the mutable array regardless unless you use `reversed()` instead
     return ourList
@@ -107,7 +108,7 @@ fun reverseSeq(n: Int): List<Int> {
 // FOOTBALL TEAM POINTS CALCULATION
 fun points(games: List<String>): Int {
     var score = 0
-    val newArr = games.map {it.split(":").map {it.toInt()}}
+    val newArr = games.map {it.split(":").map {item -> item.toInt()}}
     print(newArr)
     for(n in newArr) {
         val x = n[0]
@@ -158,11 +159,10 @@ fun catMouse(s: String): String {
 //MUMBLING CHALLENGE
 fun mumbling(str:String):String {
     val arrayed = str.mapIndexed {i, s -> s
-        .toChar() // because a single character should not be a string
         .uppercase() +
             s.toString() // because a set of concatenated characters should only be a string
                 .lowercase()
-                .repeat(i)};
+                .repeat(i)}
     return (arrayed.joinToString("-"))
 }
 
@@ -189,7 +189,7 @@ fun maxHandler(arr: IntArray): Int {
     var init = 0
     for(n in arr) {
         if(n > init) {
-            init = n;
+            init = n
         }
     }
     print(init)
@@ -205,5 +205,5 @@ fun minHandler(arr: Array<Number>): Double {
         }
     }
     print(init)
-    return init.toDouble()
+    return init
 }
