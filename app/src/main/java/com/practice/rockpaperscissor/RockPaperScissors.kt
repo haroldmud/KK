@@ -19,7 +19,7 @@ fun main() {
 //    countRedBeads(67)
 //    moveTen("butuyalelonganalalite")
     maxHandler(intArrayOf(12,23,534,765,45,3,2,3,5,5,3,4,4,6,23,423,53,64563))
-    minHandler(doubleArrayOf(-23, 32, 0,323, 0.242))
+    minHandler(arrayOf(-23, 32, 0,323, 0.242))
 }
 
 // CONVERT NUMBERS TO REVERSED ARRAY OF DIGITS
@@ -197,13 +197,13 @@ fun maxHandler(arr: IntArray): Int {
 }
 
 //MINIMUM NUMBER - Without short cut functions
-fun minHandler(arr: DoubleArray): Double {
-    var init = arr[0] // don't initialize with 0 unless your array is purely of ints just like 0
+fun minHandler(arr: Array<Number>): Double {
+    var init = arr[0].toDouble() // don't initialize with 0 unless your array is purely of ints just like 0
     for(n in arr) {
-        if(n < init) {
-            init = n
+        if(n.toDouble() < init) {
+            init = n.toDouble()
         }
     }
     print(init)
-    return init
+    return init.toDouble()
 }
