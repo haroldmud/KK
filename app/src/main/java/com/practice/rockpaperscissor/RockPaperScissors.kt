@@ -183,7 +183,7 @@ fun moveTen(s: String): String {
     return result
 }
 
-//MAX AND MIN NUM Without using the max function
+//MAXIMUM NUMBER - Without using the max function
 fun maxAndMin(arr: IntArray): Int {
     var init = 0
     for(n in arr) {
@@ -194,3 +194,6 @@ fun maxAndMin(arr: IntArray): Int {
     print(init)
     return init
 }
+
+//MINIMUM NUMBER - Without short cut functions
+fun min
