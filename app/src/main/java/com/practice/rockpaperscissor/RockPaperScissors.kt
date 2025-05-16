@@ -16,7 +16,7 @@ fun main() {
     smallEnough(intArrayOf(12,34,54), 56)
     nameValue(arrayOf("digitize", "get ascii", "checkFactor"))
     catMouse("C..................m")
-    mumbling("pekapeka")
+    mumbling("peekaboo")
     countRedBeads(67)
     moveTen("butuyalelonganalalite")
     maxHandler(intArrayOf(12,23,534,765,45,3,2,3,5,5,3,4,4,6,23,423,53,64563))
@@ -113,10 +113,10 @@ fun points(games: List<String>): Int {
     for(n in newArr) {
         val x = n[0]
         val y = n[1]
-        when {
-            (x > y) -> score += 3
-            (x < y) -> score += 0
-            else -> score += 1
+        score += when {
+            (x > y) -> 3
+            (x < y) -> 0
+            else ->  1
         }
     }
     return score
@@ -145,8 +145,8 @@ fun nameValue(arr: Array<String>): IntArray {
         val asciiInit = 96
 
         val result = arr.map {
-            it.lowercase().toCharArray().map {it.code - asciiInit}
-        }.map {it.filter {it > 0}.sum()}
+            it.lowercase().toCharArray().map {c -> c.code - asciiInit}
+        }.map {c -> c.filter {it > 0}.sum()}
 
         return result.mapIndexed {index, value -> value * (index + 1)}.toIntArray()
 }
