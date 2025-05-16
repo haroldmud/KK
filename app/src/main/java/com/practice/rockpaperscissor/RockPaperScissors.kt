@@ -163,7 +163,7 @@ fun mumbling(str:String):String {
     return (arrayed.joinToString("-"))
 }
 
-//Two red beads are placed between every two blue beads count them
+//COUNT BEADS: Two red beads are placed between every two blue beads count them
 fun countRedBeads(nBlue: Int): Int {
     return if(nBlue < 2) 0 else (nBlue - 1) * 2
 }
