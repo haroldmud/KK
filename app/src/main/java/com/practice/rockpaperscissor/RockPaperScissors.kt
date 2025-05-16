@@ -197,8 +197,8 @@ fun maxHandler(arr: IntArray): Int {
 }
 
 //MINIMUM NUMBER - Without short cut functions
-fun minHandler(arr: IntArray): Int {
-    var init = 0
+fun minHandler(arr: DoubleArray): Double {
+    var init = arr[0] // don't initialize with 0 unless your array is purely of ints just like 0
     for(n in arr) {
         if(n < init) {
             init = n
