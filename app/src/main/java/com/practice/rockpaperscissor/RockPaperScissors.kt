@@ -1,23 +1,24 @@
 package com.practice.rockpaperscissor
 
 fun main() {
-    digitize(510000)
-    getAscii('C')
-    checkFactor(5, 10)
-    mixedSum(listOf(23,50, "89"))
-    replace("Hello WORLD")
-    rps("rock", "paper")
-    doubleChar("Big Man Ting yeah")
-    sumPositives(arrayOf(20, -4, 10).toIntArray())
-    reverseSeq(5)
-    points(listOf("1:1", "2:4", "1:0", "4:3", "5:5", "2:1", "0:0"))
-    maxDiffHandler(arrayOf("lana", "del", "rey"), arrayOf("able", "tesfaye") )
-    smallEnough(intArrayOf(12,34,54), 56)
-    nameValue(arrayOf("digitize", "get ascii", "checkFactor"))
-    catMouse("C..................m")
-    mumbling("pekapeka")
-    countRedBeads(67)
-    moveTen("butuyalelonganalalite")
+//    digitize(510000)
+//    getAscii('C')
+//    checkFactor(5, 10)
+//    mixedSum(listOf(23,50, "89"))
+//    replace("Hello WORLD")
+//    rps("rock", "paper")
+//    doubleChar("Big Man Ting yeah")
+//    sumPositives(arrayOf(20, -4, 10).toIntArray())
+//    reverseSeq(5)
+//    points(listOf("1:1", "2:4", "1:0", "4:3", "5:5", "2:1", "0:0"))
+//    maxDiffHandler(arrayOf("lana", "del", "rey"), arrayOf("able", "tesfaye") )
+//    smallEnough(intArrayOf(12,34,54), 56)
+//    nameValue(arrayOf("digitize", "get ascii", "checkFactor"))
+//    catMouse("C..................m")
+//    mumbling("pekapeka")
+//    countRedBeads(67)
+//    moveTen("butuyalelonganalalite")
+    maxAndMin(intArrayOf(12,23,534,765,45,3,2,3,5,5,3,4,4,6,23,423,53,64563,))
 }
 
 // CONVERT NUMBERS TO REVERSED ARRAY OF DIGITS
@@ -180,4 +181,16 @@ fun moveTen(s: String): String {
             ((item.code + 10 - z) + a - 1).toChar()
     }.joinToString("")
     return result
+}
+
+//MAX AND MIN NUM Without using the max function
+fun maxAndMin(arr: IntArray): Int {
+    var init = 0
+    for(n in arr) {
+        if(n > init) {
+            init = n;
+        }
+    }
+    print(init)
+    return init
 }
