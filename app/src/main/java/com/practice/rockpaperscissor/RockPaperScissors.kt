@@ -167,3 +167,16 @@ fun mumbling(str:String):String {
 fun countRedBeads(nBlue: Int): Int {
     return if(nBlue < 2) 0 else (nBlue - 1) * 2
 }
+
+//MOVE 10
+fun moveTen(s: String): String {
+    val z = 'z'.code
+    val a = 'a'.code
+    val result = s.map{ item ->
+        if(item.code + 10 <= z )
+            (item.code + 10).toChar()
+        else
+            ((item.code + 10 - z) + a - 1).toChar()
+    }.joinToString("")
+    return result
+}
