@@ -168,7 +168,7 @@ fun countRedBeads(nBlue: Int): Int {
     return if(nBlue < 2) 0 else (nBlue - 1) * 2
 }
 
-//MOVE 10
+//MOVE 10: crypt a string by assigning to each character the 10th alphabet ahead of it
 fun moveTen(s: String): String {
     val z = 'z'.code
     val a = 'a'.code
