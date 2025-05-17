@@ -1,29 +1,27 @@
 package com.practice.rockpaperscissor
 
 fun main() {
-    digitize(510000)
-    maps(intArrayOf(3,23,4,5,34))
-    getAscii('C')
-    checkFactor(5, 10)
-    mixedSum(listOf(23,50, "89"))
-    replace("Hello WORLD")
-    rps("rock", "paper")
-    doubleChar("Big Man Ting yeah")
-    sumPositives(arrayOf(20, -4, 10).toIntArray())
-    reverseSeq(5)
-    points(listOf("1:1", "2:4", "1:0", "4:3", "5:5", "2:1", "0:0"))
-    maxDiffHandler(arrayOf("lana", "del", "rey"), arrayOf("able", "tesfaye") )
-    smallEnough(intArrayOf(12,34,54), 56)
-    nameValue(arrayOf("digitize", "get ascii", "checkFactor"))
-    catMouse("C..................m")
-    mumbling("peekaboo")
-    countRedBeads(67)
-    moveTen("butuyalelonganalalite")
+//    digitize(510000)
+//    maps(intArrayOf(3,23,4,5,34))
+//    getAscii('C')
+//    checkFactor(5, 10)
+//    mixedSum(listOf(23,50, "89"))
+//    replace("Hello WORLD")
+//    rps("rock", "paper")
+//    doubleChar("Big Man Ting yeah")
+//    sumPositives(arrayOf(20, -4, 10).toIntArray())
+//    reverseSeq(5)
+//    points(listOf("1:1", "2:4", "1:0", "4:3", "5:5", "2:1", "0:0"))
+//    maxDiffHandler(arrayOf("lana", "del", "rey"), arrayOf("able", "tesfaye") )
+//    smallEnough(intArrayOf(12,34,54), 56)
+//    nameValue(arrayOf("digitize", "get ascii", "checkFactor"))
+//    catMouse("C..................m")
+//    mumbling("peekaboo")
+//    countRedBeads(67)
+//    moveTen("butuyalelonganalalite")
     searchMaxOrMin(
-        ::maxHandler,
-        ::minHandler,
-        searchMax = true,
-        searchMin = false,
+        searchMax = false,
+        searchMin = true,
         intArrayOf(12,23,534,765,45,3,2,3,5,5,3,4,4,6,23,423,53,64563),
         arrayOf(-23, 32, 0,323, 0.242)
     )
@@ -198,7 +196,7 @@ fun maxHandler(arr: IntArray): Int {
             init = n
         }
     }
-    print(init)
+//    print(init)
     return init
 }
 
@@ -210,18 +208,19 @@ fun minHandler(arr: Array<Number>): Double {
             init = n.toDouble()
         }
     }
-    print(init)
+//    print(init)
     return init
 }
 
 fun searchMaxOrMin(
-    findMax: (IntArray ) -> Int,
-    findMin: (Array<Number>) -> Double,
     searchMax: Boolean,
     searchMin: Boolean,
     listMax: IntArray,
     listMin: Array<Number>
-    ) {
-  if(searchMax) findMax(listMax)
-  if(searchMin) findMin(listMin)
+    ): Int {
+    val max = maxHandler(listMax)
+    val min: Double = minHandler(listMin)
+  if(searchMax)  println("Here is the biggest number: $max")
+  if(searchMin) print("Here is the smalles number: ${min.toInt()}")
+    return -1
 }
