@@ -19,6 +19,7 @@ fun main() {
 //    mumbling("peekaboo")
 //    countRedBeads(67)
 //    moveTen("butuyalelonganalalite")
+    hidePasswordFromConnection("https://www.codewars.com/kata/5a726f16373c2ee6c60000db/solutions/kotlin?password=12345&user=admin")
     searchMaxOrMin(
         searchMax = false,
         searchMin = true,
@@ -225,10 +226,8 @@ fun searchMaxOrMin(
     return -1
 }
 
-object PasswordHider {
-    fun hidePasswordFromConnection(urlString: String): String {
-        val result = urlString.split("password=").getOrNull(1)?.split("&")?.firstOrNull()
-        val crypt = result?.map {"*"}?.joinToString("")
-        return if(result != null && crypt != null)  urlString.replace(result, crypt) else ""
-    }
+fun hidePasswordFromConnection(urlString: String): String {
+    val result = urlString.split("password=").getOrNull(1)?.split("&")?.firstOrNull()
+    val crypt = result?.map {"*"}?.joinToString("")
+    return if(result != null && crypt != null)  urlString.replace(result, crypt) else ""
 }
