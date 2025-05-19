@@ -197,7 +197,6 @@ fun maxHandler(arr: IntArray): Int {
             init = n
         }
     }
-//    print(init)
     return init
 }
 
