@@ -213,6 +213,7 @@ fun minHandler(arr: Array<Number>): Double {
     return init
 }
 
+//FIND MAXIMUM AND MINIMUM NUMBER
 fun searchMaxOrMin(
     searchMax: Boolean,
     searchMin: Boolean,
@@ -226,6 +227,7 @@ fun searchMaxOrMin(
     return -1
 }
 
+//HIDING PASSWORD IN URL
 fun hidePasswordFromConnection(urlString: String): String {
     val result = urlString.split("password=").getOrNull(1)?.split("&")?.firstOrNull()
     val crypt = result?.map {"*"}?.joinToString("")
