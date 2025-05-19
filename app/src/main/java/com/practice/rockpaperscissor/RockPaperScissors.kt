@@ -224,3 +224,11 @@ fun searchMaxOrMin(
   if(searchMin) print("Here is the smalles number: ${min.toInt()}")
     return -1
 }
+
+object PasswordHider {
+    fun hidePasswordFromConnection(urlString: String): String {
+        val result = urlString.split("password=").getOrNull(1)?.split("&")?.firstOrNull()
+        val crypt = result?.map {"*"}?.joinToString("")
+        return if(result != null && crypt != null)  urlString.replace(result, crypt) else ""
+    }
+}
