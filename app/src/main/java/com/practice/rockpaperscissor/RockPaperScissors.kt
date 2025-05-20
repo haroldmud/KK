@@ -26,6 +26,7 @@ fun main() {
         intArrayOf(12,23,534,765,45,3,2,3,5,5,3,4,4,6,23,423,53,64563),
         arrayOf(-23, 32, 0,323, 0.242)
     )
+    geometricSequenceElements(2,3,5,)
 }
 
 // CONVERT NUMBERS TO REVERSED ARRAY OF DIGITS
