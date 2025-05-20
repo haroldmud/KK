@@ -232,3 +232,18 @@ fun hidePasswordFromConnection(urlString: String): String {
     val crypt = result?.map {"*"}?.joinToString("")
     return if(result != null && crypt != null)  urlString.replace(result, crypt) else ""
 }
+
+// GEOMETRICAL SEQUENCE(a: the initialize, r: the sequence, n: the number of sequence)
+fun geometricSequenceElements(a: Int, r: Int, n: Int): String{
+    val elements = mutableListOf<Int>()
+    var init = a
+    for(x in 1..<n) {
+        if(x == 1) {
+            elements.add(init)
+        }
+        elements.add(init * r)
+        init *= r
+    }
+    return elements.joinToString(", ")
+}
+
