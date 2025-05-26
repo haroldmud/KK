@@ -248,3 +248,14 @@ fun geometricSequenceElements(a: Int, r: Int, n: Int): String{
     return elements.joinToString(", ")
 }
 
+fun makeComplement(dna : String) : String {
+    return dna.map {
+        when (it) {
+            'A' -> 'T'
+            'T' -> 'A'
+            'C' -> 'G'
+            'G' -> 'C'
+            else -> it
+        }
+    }.joinToString("")
+}
