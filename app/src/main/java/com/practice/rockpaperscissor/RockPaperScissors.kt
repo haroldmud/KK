@@ -27,6 +27,7 @@ fun main() {
         arrayOf(-23, 32, 0,323, 0.242)
     )
     geometricSequenceElements(2,3,5,)
+    makeComplement("DONAT")
 }
 
 // CONVERT NUMBERS TO REVERSED ARRAY OF DIGITS
