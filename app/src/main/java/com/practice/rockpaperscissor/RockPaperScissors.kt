@@ -248,6 +248,7 @@ fun geometricSequenceElements(a: Int, r: Int, n: Int): String{
     }
     return elements.joinToString(", ")
 }
+
 //DNA COMPLETION OF  A-T AND C-G
 fun makeComplement(dna : String) : String {
     return dna.map {
