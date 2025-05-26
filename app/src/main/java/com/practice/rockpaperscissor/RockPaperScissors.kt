@@ -224,7 +224,7 @@ fun searchMaxOrMin(
     val max = maxHandler(listMax)
     val min: Double = minHandler(listMin)
   if(searchMax)  println("Here is the biggest number: $max")
-  if(searchMin) print("Here is the smalles number: ${min.toInt()}")
+  if(searchMin) print("Here is the smallest number: ${min.toInt()}")
     return -1
 }
 
