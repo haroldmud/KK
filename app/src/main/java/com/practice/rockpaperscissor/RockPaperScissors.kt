@@ -269,7 +269,6 @@ fun evaporator(content: Double, evap_per_day: Double, threshold: Double): Int {
     do {
         val dailyInMl = remaining * evap_per_day/100
         remaining -= dailyInMl
-        println(remaining)
         dayCounter++
     } while(remaining > thresholdInMl)
     return (dayCounter)
