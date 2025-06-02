@@ -263,6 +263,7 @@ fun makeComplement(dna : String) : String {
     }.joinToString("")
 }
 
+//DEODORANT EVAPORATOR -- How long until it's finished if 1% of the remaining content is used daily
 fun evaporator(content: Double, evap_per_day: Double, threshold: Double): Int {
     val thresholdInMl = content * threshold/100
     var remaining = content
