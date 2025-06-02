@@ -263,11 +263,11 @@ fun makeComplement(dna : String) : String {
 }
 
 fun evaporator(content: Double, evap_per_day: Double, threshold: Double): Int {
-    var thresholdInMl = content * threshold/100
+    val thresholdInMl = content * threshold/100
     var remaining = content
     var dayCounter = 0
     do {
-        var dailyInMl = remaining * evap_per_day/100
+        val dailyInMl = remaining * evap_per_day/100
         remaining = remaining - dailyInMl
         println(remaining)
         dayCounter++
