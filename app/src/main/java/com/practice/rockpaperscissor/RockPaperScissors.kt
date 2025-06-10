@@ -275,3 +275,19 @@ fun evaporator(content: Double, evap_per_day: Double, threshold: Double): Int {
     } while(remaining > thresholdInMl)
     return (dayCounter)
 }
+
+fun fizzBuzzCuckooClock(time: String) : String {
+    val splitTime = time.split(":").map { it.toInt() }
+    val hour = splitTime[0]
+    val min = splitTime[1]
+    return when {
+        min == 30 -> "Cuckoo"
+        (hour == 0 || hour == 12) && min == 0 -> "Cuckoo ".repeat(12).dropLast(1)
+        min == 0 -> "Cuckoo ".repeat(hour - 12).dropLast(1)
+        min % 3 == 0 && min % 5 == 0 -> "Fizz Buzz"
+        min % 3 == 0 -> "Fizz"
+        min % 5 == 0 -> "Buzz"
+        else -> "tick"
+    }
+}
+
