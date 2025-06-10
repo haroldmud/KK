@@ -29,6 +29,7 @@ fun main() {
     geometricSequenceElements(2,3,5,)
     makeComplement("DONAT")
     evaporator(123.3, 10.0, 5.0 )
+    fizzBuzzCuckooClock("21:45")
 }
 
 // CONVERT NUMBERS TO REVERSED ARRAY OF DIGITS
