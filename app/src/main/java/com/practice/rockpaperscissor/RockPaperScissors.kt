@@ -276,7 +276,7 @@ fun evaporator(content: Double, evap_per_day: Double, threshold: Double): Int {
     return (dayCounter)
 }
 
-//Fizz Buzz Cuckoo Clock
+//FIZZ BUZZ CUCKOO CLOCK
 fun fizzBuzzCuckooClock(time: String) : String {
     val splitTime = time.split(":").map { it.toInt() }
     val hour = splitTime[0]
