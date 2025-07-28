@@ -1,1 +1,1 @@
-Kotkin Coding challenges
+Kotkin Coding challenges for learning purposes
