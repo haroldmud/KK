@@ -1,1 +1,1 @@
-bunch Kotkin Coding challenges for practice and learning purposes.
+a bunch Kotkin Coding challenges for practice and learning purposes.
